@@ -1,0 +1,16 @@
+<main role="main" class="container">
+    <h1 class="mt-5">&nbsp;</h1>
+    <h5 class="mt-5">Reports</h5>
+    <br/>
+    <div class="loader" *ngIf="dataLoading"></div>
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    An error occured. Here is the error : {{ errorMessage }}.
+  </div>
+  <br/><br/>
+DTTM   Name   GPS<br/>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of myDocData">
+            {{item.dttm}} - {{item.name}} - {{item.lat}}/{{item.long}}
+        </li>
+      </ul>
+  </main>

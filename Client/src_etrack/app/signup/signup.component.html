@@ -1,0 +1,45 @@
+<!-- Begin page content -->
+<main role="main" class="container">
+  <h1 class="mt-5">&nbsp;</h1>
+  <h5 class="mt-5">Create new Account</h5>
+  <br/>
+  <div class="loader" *ngIf="dataLoading"></div>
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    An error occured. Here is the error : {{ errorMessage }}.
+  </div>
+  <div *ngIf="savedChanges else showForm">
+    New Account is created. Please login.
+    <button class="btn btn-lg btn-primary btn-block" routerLink="/login" type="button">Login</button>
+  </div>
+  <ng-template #showForm>
+    <span class="lead">
+      <form class="form-signin" #newUserForm="ngForm" (ngSubmit)="setUser(newUserForm.value)">
+        <div class="form-label-group">
+          <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" #inputEmail="ngModel"
+            autofocus required email ngModel>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="inputEmail.invalid && (inputEmail.dirty || inputEmail.touched)">
+          Please enter a valid email.
+        </div>
+        <br/>
+        <div class="form-label-group">
+          <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" #inputPassword="ngModel"
+            required minlength="3" maxlength="20" ngModel>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="inputPassword.invalid && (inputPassword.dirty || inputPassword.touched)">
+          Please enter a valid password between 3 to 20 chars.
+        </div>
+        <br/>
+        <div *ngIf="!newUserForm.valid else showSubmitButton">
+          <button class="btn btn-lg btn-block btn-block" type="submit" disabled>Sign up</button>
+        </div>
+        <ng-template #showSubmitButton>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+        </ng-template>
+        <p class="mt-5 mb-3 text-muted text-center">
+          <a routerLink="/login">Login</a>
+        </p>
+      </form>
+    </span>
+  </ng-template>
+</main>
