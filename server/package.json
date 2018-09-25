@@ -1,0 +1,11 @@
+{
+  "name": "gps-mobile-tracker",
+  "version": "1.0.0",
+  "description": "GPS Mobile Tracking App",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Amit Shukla",
+  "license": "MIT"
+}
