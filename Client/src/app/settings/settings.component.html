@@ -1,0 +1,62 @@
+<!-- Begin page content -->
+<main role="main" class="container">
+  <h1 class="mt-5">&nbsp;</h1><button class="btn btn-primary" (click)="logout();" type="button">Logout</button>
+  <h5 class="mt-5">Settings</h5>
+  <br/>
+  <div class="loader" *ngIf="dataLoading"></div>
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    An error occured. Here is the error : {{ errorMessage }}.
+  </div>
+  <div *ngIf="savedChanges else showForm">
+    Your changes are saved.
+    <button class="btn btn-lg btn-primary btn-block" (click)="savedChanges=!savedChanges; getData();" type="button">Close</button>
+  </div>
+  <ng-template #showForm>
+      <span class="lead">
+          <form class="form-signin" #settingsForm="ngForm" (ngSubmit)="settings(settingsForm.value)">
+            <div class="form-label-group">
+              <input type="text" name="name" id="name" class="form-control" placeholder="Name" autofocus #name="ngModel" autofocus required [ngModel]="docData?.name" minlength="3" maxlength="30">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="name.invalid && (name.dirty || name.touched)">
+                Please enter a valid name between 3 to 30 chars.
+              </div>
+            <br/>
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" #inputEmail="ngModel" required autofocus [ngModel]="docData?.email" email>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="inputEmail.invalid && (inputEmail.dirty || inputEmail.touched)">
+                Please enter a valid email.
+              </div>
+            <br/>
+            <div class="form-label-group">
+              <!--<input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" #inputPassword="ngModel" required autofocus [ngModel]="docData?.password" minlength="3" maxlength="300">-->
+              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" #inputPassword="ngModel" required autofocus ngModel minlength="3" maxlength="300">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="inputPassword.invalid && (inputPassword.dirty || inputPassword.touched)">
+                Please enter a valid password between 3 to 30 chars.
+              </div>
+            <br/>
+            <div class="form-label-group">
+              <input type="text" name="question" id="question" class="form-control" placeholder="Security Question" #question="ngModel" required autofocus [ngModel]="docData?.question" minlength="3" maxlength="30">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="question.invalid && (question.dirty || question.touched)">
+                Please enter a valid Question between 3 to 30 chars.
+              </div>
+            <br/>
+            <div class="form-label-group">
+              <input type="text" name="answer" id="answer" class="form-control" placeholder="Security Answer"  #answer="ngModel" required autofocus [ngModel]="docData?.answer" minlength="3" maxlength="30">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="answer.invalid && (answer.dirty || answer.touched)">
+                Please enter a valid answer between 3 to 30 chars.
+              </div>
+            <br/>
+            <div *ngIf="!settingsForm.valid else showSubmitButton">
+                <button class="btn btn-lg btn-block btn-block" type="submit" disabled>Update</button>
+              </div>
+              <ng-template #showSubmitButton>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+              </ng-template>
+          </form>
+        </span>
+  </ng-template>
+</main>
