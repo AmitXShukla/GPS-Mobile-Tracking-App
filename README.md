@@ -1,10 +1,10 @@
-<h2>HTML Bootstrap Angular 6 MYSQL NodeJS CRUD Operation</h2>
-<h2>HTML, Bootstrap, Angular 6, NodeJS and MYSQL App</h2>
+<h2>HTML Bootstrap Angular 7 MYSQL NodeJS CRUD Operation</h2>
 <h2>GPS Mobile Location Tracking App</h2>
+<h2><a href="https://www.youtube.com/playlist?list=PLp0TENYyY8lHJGZX6-Ek4MkvAnzWmC9oa">Video Tutorials Link!</a></h2>
 In this app, I am going to demostrate how to use most common, popular  and widely used technologies.<br/>
 I believe, HTML, CSS, Javascript and Bootstrap are still used in 90% of iOS and Android we see today in market.<br/>
 And MYSQL is no doubt king of all databases.<br/>
-I am also going to make use of advance Angular 6 framework at front end which will connect to MYSQL database at the backend through NOdeJS Javascript engine.<br/><br/>
+I am also going to make use of advance Angular 7 framework at front end which will connect to MYSQL database at the backend through NOdeJS Javascript engine.<br/><br/>
 My Objective is to show how to make a complete CRUD operations in MYSQL & Angular 6. <br/>
 However, instead of making a simple manual or tutorial, I am going to demostrate this in a real-life app.<br/>
 One other reason, I want to show CRUD in an app is, because writing CRUD in production is very different than what do you see in tutorials or manuals.<br/>
@@ -23,7 +23,7 @@ We are going to use part of this website in our Angular App.
 If you are using VisualCode editor, please install a live-server extension.<br/>
 Otherwise, you can use any webserver to host your website.<br/>
 Now, let's create index.html, login.html, signup.html, aboutus.html, dashboard.html, reports.html and settings.html and host this to your webserver.<br/>
-At this point, we only want to make sure that individual html pages work fine only, these pages don't need to be connected or have any business logic because we are going to write all business, routing and other logic in Angular 6.
+At this point, we only want to make sure that individual html pages work fine only, these pages don't need to be connected or have any business logic because we are going to write all business, routing and other logic in Angular 7.
 <br/><br/>
 Before we start, Please make sure you have latest version of node js installed.<br/>
 Let's head out to https://nodejs.org/en/ and grab latest nodejs.<br/>
