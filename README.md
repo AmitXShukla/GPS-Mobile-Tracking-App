@@ -12,7 +12,7 @@ In real-life App, each of the CRUD operations should be authenticated and authro
 Each and every database call, whether is read or write, should be properly authenticated and authorized based on invididual user privileges and busines operations.<br/>
 For example, User can only update their own settings and admin can update someone else password.<br/>
 <h2>Tools: </h2>
-<b>front-end:</b> Angular 6, HTML CSS JS & Bootstrap<br/>
+<b>front-end:</b> Angular 7, HTML CSS JS & Bootstrap<br/>
 <b>back-end:</b> MYSQL<br/>
 <b>middleware:</b> JWT, CORS, NodeJS, Express etc.<br/>
 <h2>Let's get started :-</h2>
