@@ -5,7 +5,7 @@ In this app, I am going to demostrate how to use most common, popular  and widel
 I believe, HTML, CSS, Javascript and Bootstrap are still used in 90% of iOS and Android we see today in market.<br/>
 And MYSQL is no doubt king of all databases.<br/>
 I am also going to make use of advance Angular 7 framework at front end which will connect to MYSQL database at the backend through NOdeJS Javascript engine.<br/><br/>
-My Objective is to show how to make a complete CRUD operations in MYSQL & Angular 6. <br/>
+My Objective is to show how to make a complete CRUD operations in MYSQL & Angular 7. <br/>
 However, instead of making a simple manual or tutorial, I am going to demostrate this in a real-life app.<br/>
 One other reason, I want to show CRUD in an app is, because writing CRUD in production is very different than what do you see in tutorials or manuals.<br/>
 In real-life App, each of the CRUD operations should be authenticated and authroized before it's allowed to access database and perform any operations.<br/>
@@ -45,3 +45,4 @@ $ ng serve<br/>
 $ cd server<br/>
 $ npm init<br/>
 $ npm install --save nodemon cors express dotenv jsonwebtoken mysql bcrypt body-parser<br/>
+$ nodemon app
