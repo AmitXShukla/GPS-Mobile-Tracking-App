@@ -46,3 +46,30 @@ $ cd server<br/>
 $ npm init<br/>
 $ npm install --save nodemon cors express dotenv jsonwebtoken mysql bcrypt body-parser<br/>
 $ nodemon app
+
+MYSQL Tables
+--
+-- Table structure for table `user`
+-- 
+CREATE TABLE `user` (
+  `name` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `question` varchar(100) DEFAULT NULL,
+  `answer` varchar(100) DEFAULT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `usergps`
+--
+
+CREATE TABLE `usergps` (
+  `email` varchar(100) NOT NULL,
+  `lat` varchar(10) NOT NULL,
+  `long` varchar(10) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  PRIMARY KEY (`email`,`createdAt`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
