@@ -1,5 +1,6 @@
 <h2>HTML Bootstrap Angular 7 MYSQL NodeJS CRUD Operation</h2>
 <h2>GPS Mobile Location Tracking App</h2>
+<i>send an email to info@elishconsulting.com for Pro version download.</i>
 <h2><a href="https://www.youtube.com/playlist?list=PLp0TENYyY8lHJGZX6-Ek4MkvAnzWmC9oa">Video Tutorials Link!</a></h2>
 In this app, I am going to demostrate how to use most common, popular  and widely used technologies.<br/>
 I believe, HTML, CSS, Javascript and Bootstrap are still used in 90% of iOS and Android we see today in market.<br/>
