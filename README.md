@@ -1,19 +1,20 @@
-<h2>HTML Bootstrap Angular 7 MYSQL NodeJS CRUD Operation</h2>
+<h2>HTML Bootstrap Angular 9.0 MYSQL NodeJS CRUD Operation</h2>
 <h2>GPS Mobile Location Tracking App</h2>
 <i>send an email to info@elishconsulting.com for Pro version download.</i>
+<i>This repository is updated to Angular 9.0</i>
 <h2><a href="https://www.youtube.com/playlist?list=PLp0TENYyY8lHJGZX6-Ek4MkvAnzWmC9oa">Video Tutorials Link!</a></h2>
 In this app, I am going to demostrate how to use most common, popular  and widely used technologies.<br/>
 I believe, HTML, CSS, Javascript and Bootstrap are still used in 90% of iOS and Android we see today in market.<br/>
 And MYSQL is no doubt king of all databases.<br/>
 I am also going to make use of advance Angular 7 framework at front end which will connect to MYSQL database at the backend through NOdeJS Javascript engine.<br/><br/>
-My Objective is to show how to make a complete CRUD operations in MYSQL & Angular 7. <br/>
+My Objective is to show how to make a complete CRUD operations in MYSQL & Angular 9. <br/>
 However, instead of making a simple manual or tutorial, I am going to demostrate this in a real-life app.<br/>
 One other reason, I want to show CRUD in an app is, because writing CRUD in production is very different than what do you see in tutorials or manuals.<br/>
 In real-life App, each of the CRUD operations should be authenticated and authroized before it's allowed to access database and perform any operations.<br/>
 Each and every database call, whether is read or write, should be properly authenticated and authorized based on invididual user privileges and busines operations.<br/>
 For example, User can only update their own settings and admin can update someone else password.<br/>
 <h2>Tools: </h2>
-<b>front-end:</b> Angular 7, HTML CSS JS & Bootstrap<br/>
+<b>front-end:</b> Angular 9.0, HTML CSS JS & Bootstrap<br/>
 <b>back-end:</b> MYSQL<br/>
 <b>middleware:</b> JWT, CORS, NodeJS, Express etc.<br/>
 <h2>Let's get started :-</h2>
