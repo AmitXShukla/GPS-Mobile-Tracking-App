@@ -1,6 +1,7 @@
 const pool = require('./dbconnection');
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+//const bcrypt = require('bcrypt');
+var password = require('password-hash-and-salt');
+//const saltRounds = 10;
 const jwt = require('jsonwebtoken');
 
 var resultsNotFound = {
@@ -21,12 +22,13 @@ module.exports = {
     pool.getConnection(function (err, connection) {
       if (err) throw err; // not connected!
 
-      bcrypt.hash(req.body.inputPassword, saltRounds, function (err, hash) {
+      password(req.body.inputPassword).hash(function (error, hash) {
         var sql = 'INSERT INTO user SET ?';
         var values = { 'name': req.body.inputEmail, 'email': req.body.inputEmail, 'password': hash, 'createdAt': new Date(), 'updatedAt': new Date() }
         // Use the connection
         connection.query(sql, values, function (error, results, fields) {
           if (error) {
+            console.log(error);
             resultsNotFound["errorMessage"] = "emailID already exists.";
             return res.send(resultsNotFound);
           } else return res.send(resultsFound);
@@ -54,7 +56,8 @@ module.exports = {
             resultsNotFound["errorMessage"] = "User Id not found.";
             return res.send(resultsNotFound);
           }
-          bcrypt.compare(req.body.inputPassword, results[0].password, function (err, result) {
+          password(req.body.inputPassword).verifyAgainst(results[0].password, function (error, verified) {
+          //bcrypt.compare(req.body.inputPassword, results[0].password, function (err, result) {
       if (result == true) {
         var token = {
           "token": jwt.sign(
@@ -105,7 +108,8 @@ module.exports = {
     pool.getConnection(function (err, connection) {
       if (err) throw err; // not connected!
 
-      bcrypt.hash(req.body.inputPassword, saltRounds, function (err, hash) {
+      password(req.body.inputPassword).hash(function (error, hash) {
+      //bcrypt.hash(req.body.inputPassword, saltRounds, function (err, hash) {
         var sql = 'UPDATE user SET ? WHERE `email` = ?';
         var values = { 'name': req.body.name, 'email': req.body.inputEmail, 'password': hash, 'question': req.body.question,'answer': req.body.answer, 'updatedAt': new Date() }
         // Use the connection
