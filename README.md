@@ -1,4 +1,7 @@
-## Please give a Star * to this repository if you like this project.
+```diff
++ if you like this project, Please consider,
+- following me on GitHub & a generous STAR * to this repository.
+```
 <h2>HTML Bootstrap Angular 9.0 MYSQL NodeJS CRUD Operation</h2>
 <h2>GPS Mobile Location Tracking App</h2>
 <i>send an email to info@elishconsulting.com for Pro version download.</i>
