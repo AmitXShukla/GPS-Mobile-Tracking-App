@@ -1,7 +1,11 @@
 ```diff
-+ if you like this project, Please consider,
-- following me on GitHub & a generous STAR * to this repository.
+- If you like this project, please consider giving it a star (*) and follow me at below links.
 ```
+[<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/youtube.svg" width=40 height=50>](https://youtube.com/AmitShukla_AI)
+[<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/github.svg" width=40 height=50>](https://github.com/AmitXShukla)
+[<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/medium.svg" width=40 height=50>](https://medium.com/@Amit_Shukla)
+[<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/twitter_1.svg" width=40 height=50>](https://twitter.com/ashuklax)
+
 <h2>HTML Bootstrap Angular 9.0 MYSQL NodeJS CRUD Operation</h2>
 <h2>GPS Mobile Location Tracking App</h2>
 <i>send an email to info@elishconsulting.com for Pro version download.</i>
